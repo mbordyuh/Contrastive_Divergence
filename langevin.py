@@ -4,9 +4,8 @@ import torch.autograd as autograd
 
 
 def sample_langevin(x, model, stepsize, n_steps):
-    
     "Langevin sampling"
-    
+
     noise_scale = np.sqrt(2 * stepsize)
     samples = []
     x.requires_grad = True
@@ -17,5 +16,3 @@ def sample_langevin(x, model, stepsize, n_steps):
         x = x + stepsize * grad + noise
         samples.append(x.detach())
         return samples[-1]
-
-
