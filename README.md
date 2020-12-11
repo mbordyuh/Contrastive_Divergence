@@ -1,4 +1,4 @@
 # project
 # ebm
 
-Training Energy based-learning via contrastive divergence and Langevin sampling
+Training energy based model via contrastive divergence and Langevin sampling
